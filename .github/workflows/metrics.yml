@@ -1,12 +1,9 @@
 name: Generate GitHub Stats SVGs
 
 on:
-  # Executa todo dia à meia-noite (UTC)
   schedule:
     - cron: "0 0 * * *"
-  # Permite execução manual pela aba Actions
   workflow_dispatch:
-  # Executa ao fazer push no repositório de perfil
   push:
     branches: [main]
 
@@ -32,7 +29,6 @@ jobs:
           base_indepth: yes
           config_timezone: America/Recife
           config_display: large
-          # Paleta escura alinhada ao README
           config_output: svg
           extras_css: |
             :root {
@@ -58,19 +54,22 @@ jobs:
           config_timezone: America/Recife
           config_output: svg
 
-      # ── 4. Streak (hábito de contribuições) ───────────────────────
-      - name: Generate Contribution Streak
+      # ── 4. Calendário de contribuições (isocalendar) ──────────────
+      # CORRIGIDO: plugin_habits removido — bug ativo sem fix mergeado.
+      # Causa: mudança na API do GitHub quebrou a leitura de commits
+      # (Cannot destructure property 'author'/'committer' of 'undefined'),
+      # gerando "Unexpected error" no SVG gerado.
+      # plugin_isocalendar é estável: exibe o calendário de contribuições
+      # do ano completo sem depender da API de commits afetada.
+      - name: Generate Contribution Calendar
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: github-streak.svg
           user: dataPalacio
           base: ""
-          plugin_habits: yes
-          plugin_habits_from: 365
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
           config_timezone: America/Recife
           config_output: svg
 
