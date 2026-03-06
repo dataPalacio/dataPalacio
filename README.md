@@ -158,34 +158,41 @@ gustavo = {
 </table>
 
 ---
+
 ## 📊 GitHub Stats
 
 <div align="center">
-  <table>
-    <tr>
-      <td>
-        <img
-          src="https://github-readme-stats.vercel.app/api?username=dataPalacio&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=58a6ff&icon_color=3fb950&text_color=c9d1d9"
-          height="170"
-          alt="GitHub Stats"
-        />
-      </td>
-      <td>
-        <img
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=dataPalacio&layout=compact&theme=github_dark&hide_border=true&langs_count=6&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9"
-          height="170"
-          alt="Top Languages"
-        />
-      </td>
-    </tr>
-  </table>
-</div>
 
-<div align="center">
-  <img
-    src="https://github-readme-streak-stats-eight.vercel.app?user=dataPalacio&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=58a6ff&ring=58a6ff&fire=ff7b54&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=58a6ff&sideLabels=58a6ff&dates=6e7681"
-    alt="GitHub Streak"
-  />
+<table>
+  <tr>
+    <td>
+      <img
+        src="github-stats.svg"
+        height="170"
+        alt="GitHub Stats"
+      />
+    </td>
+    <td>
+      <img
+        src="github-langs.svg"
+        height="170"
+        alt="Top Languages"
+      />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img
+        src="github-streak.svg"
+        alt="GitHub Streak"
+      />
+    </td>
+  </tr>
+</table>
+
+> ℹ️ As imagens acima são geradas automaticamente pelo GitHub Actions e salvas neste repositório.
+> Configure o workflow abaixo para ativá-las.
+
 </div>
 
 ---
